@@ -1,0 +1,62 @@
+#rent {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: $max;
+        height: 50px;
+    }
+    
+    .rent-row-1,
+    .rent-row-2 {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+
+        .rent-choice {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+            color: white;
+            padding: $p-1;
+            flex-basis: 50%;
+            // height: 300px;
+            border: 1px solid $color1;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            border-radius: 7px;
+        }
+
+        .filler {
+            width: 30%;
+        }
+
+    }
+}
+
+.mapouter {
+    
+    justify-content: center;
+    // border: 5px solid $color1;
+    position:relative;text-align:right;
+    width: 98.9vw;
+    margin: 0 0 150px 0;
+
+    .gmap_canvas {
+        // border: 5px solid white;
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:100%;
+    }
+
+    #gmap_canvas {
+        border-radius: 15px;
+    }
+}

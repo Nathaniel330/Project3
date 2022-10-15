@@ -1,0 +1,201 @@
+#hero {
+    background-image: url("../public/porsche-1851246_960_720.jpg");
+}
+
+#hero-rent {
+    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/14/50/for-rent-148891_960_720.png");
+    width: $max;
+    min-height: 100vh;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+#hero {
+    width: $max;
+    min-height: 100vh;
+    // background-image: url("https://cdn.pixabay.com/photo/2020/07/19/09/55/man-5419522_960_720.jpg");
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    // flex: 1;
+    // border: 1px solid white;
+
+    .hero-text {
+        color: $color1;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        
+
+        .hero-title {
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        .hero-description {
+            color: rgb(226, 216, 216);
+            font-weight: normal;
+            margin: 3% 0;
+            width: 30%;
+
+
+                span {
+                    color: $color1;
+                }
+        }
+
+        .hero-button {
+            border: 3px solid $color1;
+            background-color: $clear;
+            color: white;
+            text-decoration: none;
+            padding: $p-1 3%;
+        }
+    }
+
+    
+    img {
+        width: 99vw;
+        // height: 50px;
+        position: absolute;
+        bottom: 10%;
+        // left: 0;
+        transform: rotate(5deg);
+        transform-origin: top left;
+    }
+}
+
+#infographics {
+    img {
+        width: 100%;
+        height: 80vh;
+    }
+}
+
+
+#brands {
+    display: flex;
+    justify-content: space-evenly;
+    padding: $p-2;
+    margin-bottom: 50px;
+    img {
+        height: 50px
+    }
+}
+
+#reviews {
+    color:rgb(226, 216, 216);
+
+    .carousel-indicators {
+        bottom: -15px;
+
+        button {
+            width: 50px;
+        }
+
+        .active {
+            background-color: $color1;
+        }
+    }
+
+    .cross {
+        width: $max;
+        height: 50px;
+    }
+
+    .review {
+        padding: $p-3;
+        margin: $p-2 0;
+        border: 1px solid $color1;
+        border-radius: 15px;
+        text-align: center;
+
+        img{
+            width: 100px;
+            border-radius: 100%;
+        }
+
+        .reviewer {
+            color: rgb(22, 240, 247);
+            font-weight: bold;
+            margin: 15px 0 30px 0;
+        }
+
+        .review-text {
+            text-align: justify;
+        }
+
+    }
+
+    
+}
+
+#features {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 50px;
+    
+    .feature-1,
+    .feature-2 {
+        width:400px;
+        margin: 30px;
+        padding: $p-3;
+        align-self: center;
+        box-shadow: 0 0 20px rgb(23, 229, 225);
+        border-radius: 15px;
+        background-color: #0009; background-blend-mode: darken;
+        // background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        // position: relative;
+
+        .feature-title {
+            color: rgb(22, 240, 247);
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .feature-description {
+            color:rgb(226, 216, 216);
+            margin: 20px 0 35px 0;
+        }
+
+        .button-div {
+            text-align: center;
+            .feature-button {
+                padding: $p-3;
+                background-color: $color1;
+                text-decoration: none;
+                color: black;
+                border-radius: 10px;
+            }
+        }
+        
+    }
+
+    .feature-1 {
+        background-image: url("../public/porsche-1851246_960_720.jpg");
+    }
+
+    .feature-2 {
+        background-image: url("../public/mustang.jpg");
+    }  
+}
+
+
+@media (min-width: 640px) {
+    #features {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        background-image: url("../public/mustang.jpg");
+        background-color: #0009; background-blend-mode: darken;
+    }
+}

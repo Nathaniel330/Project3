@@ -2,20 +2,19 @@
 
 <body>
   
-<?php require "./includes/hero.inc.php" ?>
+<?php require "./includes/for.index/hero.inc.php" ?>
 
-<div>
-  <img src="./public/how.png" alt="" style="width:98vw">
-</div>
+<?php require "./includes/for.index/infographics.inc.php" ?>
 
-<?php require "./includes/brands.inc.php"?>
+<?php require "./includes/for.index/brands.inc.php"?>
 
-<?php require "./includes/reviews.inc.php" ?>
+<?php require "./includes/for.index/reviews.inc.php" ?>
 
-<?php require "./includes/features.inc.php" ?>
+<?php require "./includes/for.index/features.inc.php" ?>
 
 <?php require "./includes/footer.inc.php" ?>
 
+<?php require "./includes/for.index/script.inc.php" ?>
 
 </body>
 </html>

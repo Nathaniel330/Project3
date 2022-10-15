@@ -1,10 +1,25 @@
 @import 'variables';
+@import 'index.style';
+@import 'reservation.style';
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 15px;
+background-color: slategray;
+}
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: $dark;
+}
+
+nav.scrolled {
+    background: black;
 }
 
 .navbar-brand,
@@ -21,157 +36,6 @@ body {
         "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 220, 22)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-#hero {
-    width: $max;
-    height: 100vh;
-    // background-image: url("https://cdn.pixabay.com/photo/2020/07/19/09/55/man-5419522_960_720.jpg");
-    background-image: url("../public/porsche-1851246_960_720.jpg");
-    background-size: 100% 100%; 
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    // flex: 1;
-    // border: 1px solid white;
-
-    .hero-text {
-        color: $color1;
-        position: absolute;
-        top: 35%;
-        left: 5%;
-        
-
-        .hero-title {
-            font-weight: bolder;
-            font-size: 30px;
-        }
-
-        .hero-description {
-            color: rgb(226, 216, 216);
-            font-weight: normal;
-            margin: 3% 0;
-            width: 30%;
-
-
-                span {
-                    color: $color1;
-                }
-        }
-
-        .hero-button {
-            border: 3px solid $color1;
-            background-color: $clear;
-            color: white;
-            text-decoration: none;
-            padding: $p-1 3%;
-        }
-    }
-
-    
-    img {
-        width: 102vw;
-        // height: 50px;
-        position: absolute;
-        bottom: 10%;
-        // left: 0;
-        transform: rotate(5deg);
-        transform-origin: top left;
-    }
-}
-
-
-
-
-#brands {
-    display: flex;
-    justify-content: space-between;
-    padding: $p-2;
-    margin-bottom: 50px;
-    img {
-        height: 50px
-    }
-}
-
-#reviews {
-    color:rgb(226, 216, 216);
-
-    .carousel-indicators {
-        bottom: -15px;
-    }
-
-    .cross {
-        width: $max;
-        height: 50px;
-    }
-
-    .review {
-        padding: $p-2;
-        margin: $p-2 0;
-        border: 1px solid $color1;
-        border-radius: 15px;
-        text-align: center;
-
-        img{
-            width: 100px;
-            border-radius: 100%;
-        }
-
-        .reviewer {
-            color: rgb(22, 240, 247);
-            font-weight: bold;
-            margin: 15px 0 30px 0;
-        }
-
-        .review-text {
-            text-align: justify;
-        }
-
-    }
-
-    
-}
-
-#features {
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-evenly;
-
-    .feature-1,
-    .feature-2 {
-        width:300px;
-        height: 40vh;
-        padding: $p-2;
-        // -webkit-box-shadow: 0 0 10px;
-        box-shadow: 0 0 20px rgb(23, 229, 225);
-        border-radius: 15px;
-        background-color: #0009; background-blend-mode: darken;
-        // background-size: 100% 100%; 
-        background-repeat: no-repeat;
-        // position: relative;
-
-        .feature-title {
-            color: rgb(22, 240, 247);
-            font-weight: bold;
-            font-size: 30px;
-        }
-
-        .feature-description {
-            color:rgb(226, 216, 216);
-        }
-
-    }
-
-    .feature-1 {
-        background-image: url("../public/porsche-1851246_960_720.jpg");
-    }
-
-    .feature-2 {
-        background-image: url("../public/mustang.jpg");
-    }
-    
-  
-}
-
-
 footer {
     img{
         width: $max;
@@ -187,26 +51,11 @@ footer {
         justify-content: space-between;
     }
    
-
     .fa-solid, 
     .fa-brands{
+        font-size: 40px;
         color: $color1;
         width: 20px;
-        margin: 0 10px 10px 0;
+        margin: 0 30px 30px 0;
     }
-}
-
-// @media (min-width: 640px) {
-//     .aboutHead {
-//         display: flex;
-//     }
-
-//     .aboutHead :nth-child(1) {
-//         flex: 1 0 50%;
-//         align-self: center;
-//     }
-
-//     .aboutHead img {
-//         height: 300px;
-//     }
-// }
+}  

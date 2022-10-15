@@ -1,27 +1,19 @@
-body {
-  display: flex;
-  flex-direction: column;
+#hero {
+  background-image: url("../public/porsche-1851246_960_720.jpg");
+}
+
+#hero-rent {
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/12/14/50/for-rent-148891_960_720.png");
+  width: 100%;
   min-height: 100vh;
-  background-color: rgb(16, 15, 15);
-}
-
-.navbar-brand,
-.nav-link {
-  color: white;
-}
-
-.navbar-toggler {
-  border-color: rgb(220, 220, 22);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 220, 22)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 1;
 }
 
 #hero {
   width: 100%;
-  height: 100vh;
-  background-image: url("../public/porsche-1851246_960_720.jpg");
+  min-height: 100vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -54,16 +46,21 @@ body {
   padding: 1% 3%;
 }
 #hero img {
-  width: 102vw;
+  width: 99vw;
   position: absolute;
   bottom: 10%;
   transform: rotate(5deg);
   transform-origin: top left;
 }
 
+#infographics img {
+  width: 100%;
+  height: 80vh;
+}
+
 #brands {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 2%;
   margin-bottom: 50px;
 }
@@ -77,12 +74,18 @@ body {
 #reviews .carousel-indicators {
   bottom: -15px;
 }
+#reviews .carousel-indicators button {
+  width: 50px;
+}
+#reviews .carousel-indicators .active {
+  background-color: rgb(220, 220, 22);
+}
 #reviews .cross {
   width: 100%;
   height: 50px;
 }
 #reviews .review {
-  padding: 2%;
+  padding: 3%;
   margin: 2% 0;
   border: 1px solid rgb(220, 220, 22);
   border-radius: 15px;
@@ -102,15 +105,17 @@ body {
 }
 
 #features {
-  margin: 50px 0;
+  margin: 50px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 #features .feature-1,
 #features .feature-2 {
-  width: 300px;
-  height: 40vh;
-  padding: 2%;
+  width: 400px;
+  margin: 30px;
+  padding: 3%;
+  align-self: center;
   box-shadow: 0 0 20px rgb(23, 229, 225);
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -126,12 +131,126 @@ body {
 #features .feature-1 .feature-description,
 #features .feature-2 .feature-description {
   color: rgb(226, 216, 216);
+  margin: 20px 0 35px 0;
+}
+#features .feature-1 .button-div,
+#features .feature-2 .button-div {
+  text-align: center;
+}
+#features .feature-1 .button-div .feature-button,
+#features .feature-2 .button-div .feature-button {
+  padding: 3%;
+  background-color: rgb(220, 220, 22);
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
 }
 #features .feature-1 {
   background-image: url("../public/porsche-1851246_960_720.jpg");
 }
 #features .feature-2 {
   background-image: url("../public/mustang.jpg");
+}
+
+@media (min-width: 640px) {
+  #features {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  #hero {
+    background-image: url("../public/mustang.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+  }
+}
+#rent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#rent img {
+  width: 100%;
+  height: 50px;
+}
+#rent .rent-row-1,
+#rent .rent-row-2 {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+#rent .rent-row-1 .rent-choice,
+#rent .rent-row-2 .rent-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  color: white;
+  padding: 1%;
+  flex-basis: 50%;
+  border: 1px solid rgb(220, 220, 22);
+  border-radius: 7px;
+}
+#rent .rent-row-1 .rent-choice img,
+#rent .rent-row-2 .rent-choice img {
+  width: 100%;
+  height: auto;
+}
+#rent .rent-row-1 .filler,
+#rent .rent-row-2 .filler {
+  width: 30%;
+}
+
+.mapouter {
+  justify-content: center;
+  position: relative;
+  text-align: right;
+  width: 98.9vw;
+  margin: 0 0 150px 0;
+}
+.mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
+}
+.mapouter #gmap_canvas {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: slategray;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(16, 15, 15);
+}
+
+nav.scrolled {
+  background: black;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: rgb(220, 220, 22);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 220, 22)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 footer img {
@@ -147,7 +266,8 @@ footer .info {
 }
 footer .fa-solid,
 footer .fa-brands {
+  font-size: 40px;
   color: rgb(220, 220, 22);
   width: 20px;
-  margin: 0 10px 10px 0;
+  margin: 0 30px 30px 0;
 }
