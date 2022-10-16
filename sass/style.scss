@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'index.style';
 @import 'reservation.style';
+@import 'about.style';
+@import 'pricing.style';
+@import 'why_us.style';
+@import 'testimonial.style';
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -19,7 +23,7 @@ body {
 }
 
 nav.scrolled {
-    background: black;
+    background: blue;
 }
 
 .navbar-brand,
@@ -28,7 +32,7 @@ nav.scrolled {
 }
 
 .navbar-toggler {
-    border-color: $color1;
+    border-color: rgb(195, 226, 19);
 }
 
 .navbar-toggler-icon {
@@ -36,26 +40,127 @@ nav.scrolled {
         "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 220, 22)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+
+//style for previous footer
+// footer {
+//     margin-top: auto;
+//     img{
+//         width: $max;
+//         height: 50px;
+//     }
+
+//     .info { 
+//         margin-top: 50px;
+//         color:rgb(226, 216, 216);
+//         padding: $p-1;
+//         // border: 1px solid white;
+//         display: flex;
+//         justify-content: space-between;
+//     }
+   
+//     .fa-solid, 
+//     .fa-brands{
+//         font-size: 40px;
+//         color: $color1;
+//         width: 20px;
+//         margin: 0 30px 30px 0;
+//     }
+// }
+
 footer {
-    img{
-        width: $max;
-        height: 50px;
+    margin-top: auto;
+    background-color: $dark;
+    color: white;
+    padding-bottom: 25px;
+
+    img {
+    width: $max;
+    height: 50px;
     }
 
-    .info { 
-        margin-top: 50px;
-        color:rgb(226, 216, 216);
-        padding: $p-1;
-        // border: 1px solid white;
+    .info_section {
+        padding-top: 60px;
+    }
+
+    a  {
+        text-decoration: none;
+    }
+  
+    .info_col {
+        margin-bottom: 35px;
+    }
+  
+    .contact_nav {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+    
+        a {
+            flex: 1;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 10px;
+    
+            i {
+                font-size: 22px;
+                margin-right: 10px;
+            }
+    
+            &:hover {
+                color: $color1;
+            }
+        }
     }
-   
-    .fa-solid, 
-    .fa-brands{
-        font-size: 40px;
-        color: $color1;
-        width: 20px;
-        margin: 0 30px 30px 0;
+  
+    h4 {
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 20px;
+        color: white;
+        font-weight: 600;
     }
-}  
+  
+    .social_box {
+        width: 100%;
+        display: flex;
+        margin-top: 25px;
+  
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            border: 1px solid white;
+            color: white;
+            font-size: 18px;
+            margin-right: 10px;
+    
+            &:hover {
+                color: $color1;
+                border-color: $color1;
+            }
+        }
+    }
+  
+    .info_form {
+        input {
+            width: 100%;
+            border: none;
+            height: 45px;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            background-color: #eaeaea;
+            outline: none;
+            color: #101010;
+        }
+  
+        button {
+            width: 100%;
+            background-color: aqua;
+        }
+    }
+}

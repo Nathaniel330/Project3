@@ -14,8 +14,8 @@
     .rent-row-2 {
         display: flex;
         justify-content: center;
-        margin: 10px 0;
-
+        margin: 5vh 0;
+        
         .rent-choice {
             display: flex;
             flex-direction: column;
@@ -38,6 +38,14 @@
         }
 
     }
+
+    // .rent-row-1 {
+    //     margin-top: 5vh;
+    // }
+
+    // .rent-row-2 {
+    //     margin-bottom: 5vh;
+    // }
 }
 
 .mapouter {

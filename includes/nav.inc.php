@@ -9,9 +9,9 @@
                 <a class="nav-link" aria-current="page" href="/10.%20PHP/Project3/">Home</a>
                 <a class="nav-link" href="/10.%20PHP/Project3/reservation.php">Reservation</a>
                 <a class="nav-link" href="/10.%20PHP/Project3/about.php">About</a>
-                <a class="nav-link">Pricing</a>
-                <a class="nav-link">Why Us</a>
-                <a class="nav-link">Testimonial</a>
+                <a class="nav-link" href="/10.%20PHP/Project3/pricing.php">Pricing</a>
+                <a class="nav-link" href="/10.%20PHP/Project3/why_us.php">Why Us</a>
+                <a class="nav-link" href="/10.%20PHP/Project3/testimonial.php">Testimonial</a>
                 <a class="nav-link">Log in</a>
             </div>
         </div>
